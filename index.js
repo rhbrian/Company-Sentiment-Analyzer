@@ -13,17 +13,14 @@ app.get('/', function(req,res){
 		symbol: SYMBOL
 	}, function (err, news) {
 		if (err) { throw err; }
-		console.log(util.format(
-			'=== %s (%d) ===',
-			SYMBOL,
-			news.length
-			).cyan);
+		var info = `=== ${SYMBOL} ${news.length} ===`
+		console.log(
+			'\x1b[31m%s\x1b[0m', info
+			);
 		if (news[0]) {
-			console.log(
-				'%s\n...\n%s',
-				JSON.stringify(news[0], null, 2),
-				JSON.stringify(news[news.length - 1], null, 2)
-				);
+			for (var i = 0; i < news.length; i++){
+				console.log('%s\n', JSON.stringify(news[i],null,2));
+			}
 		} else {
 			console.log('N/A');
 		}
