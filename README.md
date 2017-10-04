@@ -13,7 +13,14 @@ Inside the .env write
 
 and save it.
 
-Run the program with the command  
+Run
+
+>npm install
+
+in the respository to download package dependencies. 
+
+Start the localhost with the command
 
 >node index.js
 
+Visit localhost:8000 on a browser to see results(in terminal)
