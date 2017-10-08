@@ -2,7 +2,7 @@
   "name": "company_sentiment_analyzer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.16.1",
